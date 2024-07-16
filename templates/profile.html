@@ -1,0 +1,24 @@
+<!-- profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>User Profile</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Welcome, {{ user.name }}</h1>
+        <img src="{{ user.picture }}" alt="Profile Picture">
+        <p>Email: {{ user.email }}</p>
+        <p>Given Name: {{ user.given_name }}</p>
+        <p>Family Name: {{ user.family_name }}</p>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>
